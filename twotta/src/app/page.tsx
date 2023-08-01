@@ -6,6 +6,7 @@ import {BsBookmark} from 'react-icons/Bs'
 import {AiOutlineUser} from 'react-icons/Ai'
 import {GiDinosaurEgg} from 'react-icons/Gi'
 import Link from 'next/link'
+import LeftPane from '@/Components/left-pane'
 
 const NAVIGATION_ITEMS = [
   {
@@ -42,36 +43,27 @@ const Home = () => {
   return (
     <div className= "w-full h-full flex justify-center items-center relative bg-black">
       <div className="max-w-screen-xl w-full h-full flex relative">
-        <section className="fixed w-[275px] flex flex-col items-stretch h-screen">
-          <div className ="flex flex-col items-stretch h-full space-y-4 mt-4">
-            {NAVIGATION_ITEMS.map((item) => (
-              <Link 
-               className = 'hover:bg-white/30 transition duration-200 flex items-center justify-start w-fit space-x-2 rounded-3xl py-2 px-6' 
-               href={`/${item.title.toLowerCase()}`} 
-               key={item.title}>
-                <div>
-                  <item.icon/>
+        <LeftPane/>
+        <main className ="ml-[275px] flex w-[600px] g-full flex-col min-h-screen border-l-[0.5px] border-r-[0.5px] border-gray-300">
+          <h1 className=" p-6 px-4 text-xl font-bold">Home</h1>
+          <div className='flex items-stretch space-x-2 py-4 px-6 border-t-[0.5px] border-b-[0.5px] border-gray-300 relative'>
+            <div className='w-10 h-10 bg-slate-300 rounded-full flex-none'></div>
+            <div className='flex flex-col w-full h-full'>
+              <input 
+              className='w-full h-full bg-transparent border-b-[0.5px] border-gray-300 p-4 outline-none border-none placeholder:text-2xl placeholder:text-gray-500' 
+               type='text' 
+              placeholder="How's ya?"/>
+              <div className='w-full justify-between items-center flex'>
+                <div></div>
+                <div className='w-full max-w-[100px]'>
+                  <button className ="w-full rounded-full m-4 bg-twotcolour px-4 py-2 text-lg font-bold text-center hover:bg-opacity-40 transition duration-100" >
+                    Twot
+                  </button>
                 </div>
-                {item.title !== "Twotta" && <div>{item.title}</div>}
-              </Link>
-            ))}
-            <button className ="w-full rounded-full m-4 bg-twotcolour p-4 text-2xl text-center hover:bg-opacity-40 transition duration-100" >
-              Twot
-            </button>
+              </div>
+            </div>
           </div>
-          <button className ="rounded-full flex items-center space-x-2 m-4 bg-transparent p-4 text-2xl text-center hover:bg-white/10 transition duration-200">
-            <div className="rounded-full bg-slate-400 w-10 h-10">
-
-            </div>
-            <div className="text-left">
-              <div className="text-xs font-semibold">UserName</div>
-              <div className="text-xs">@UserNam</div>
-            </div>
-
-          </button>
-        </section>
-        <div></div>
-        <div></div>
+        </main>
       </div>
     </div>
   )
