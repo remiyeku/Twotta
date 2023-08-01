@@ -1,43 +1,4 @@
-import {IoMdHome} from 'react-icons/Io'
-import {FaSlackHash} from 'react-icons/Fa'
-import {PiBellRingingFill} from 'react-icons/Pi'
-import {HiOutlineEnvelope} from 'react-icons/hi2'
-import {BsBookmark} from 'react-icons/Bs'
-import {AiOutlineUser} from 'react-icons/Ai'
-import {GiDinosaurEgg} from 'react-icons/Gi'
-import Link from 'next/link'
 import LeftPane from '@/Components/left-pane'
-
-const NAVIGATION_ITEMS = [
-  {
-    title: 'Twotta',
-    icon:GiDinosaurEgg
-  },
-  {
-    title:'home',
-    icon:IoMdHome
-  },
-  {
-    title:'Explore',
-    icon:FaSlackHash
-  },
-  {
-    title:'Notifications',
-    icon:PiBellRingingFill
-  },
-  {
-    title:'Messages',
-    icon:HiOutlineEnvelope
-  },
-  {
-    title:'Bookmarks',
-    icon:BsBookmark
-  },
-  {
-    title:'Profile',
-    icon:AiOutlineUser
-  }
-]
 
 const Home = () => {
   return (
