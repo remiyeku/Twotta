@@ -1,13 +1,68 @@
 import LeftPane from '@/Components/left-pane'
 import MainPane from '@/Components/main-pane'
-
+import {BiSearch} from 'react-icons/Bi'
 
 const Home = () => {
   return (
     <div className= "w-full h-full flex justify-center items-center relative bg-black">
-      <div className="max-w-screen-xl w-full h-full flex relative">
+      <div className="max-w-[80vw] w-full h-full flex relative">
         <LeftPane/>
         <MainPane/>
+        <section className='sticky top-2 overflow-y-scroll mt-2 border-3 flex flex-col items-stretch h-screen px-6'>
+          <div>
+            <div className='relative w-full h-full group'>
+            <input 
+              id='searchBox'
+              type='text' 
+              placeholder='Search Twot' 
+              className='outline-none peer focus:border-twotcolour focus:border bg-neutral-700/90 w-full h-full rounded-xl py-4 pl-14 pr-4'
+            />
+            <label 
+              htmlFor='searchBox' 
+              className='absolute top-0 left-0 h-full flex items-center justify-center p-4 text-gray-400 peer-focus:text-twotcolour'
+            >
+                <BiSearch className='w-5 h-5'/>
+            </label>       
+            </div>
+          </div>
+          <div className='flex flex-col rounded-xl bg-neutral-700/90 my-4'>
+            <h3 className='font-bold text-xl px-4 my-4'> What’s the Twot?</h3>
+            <div>
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div 
+                key={i} 
+                className='hover:bg-white/10 p-4 last:rounded-b-xl transition duration-200'
+                >
+                  <div className='font-bold text-large'>#trending ${i+1}</div>
+                  <div className='text-xs text-neutral-400'>35.8k</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className='flex flex-col rounded-xl bg-neutral-700/90 my-4'>
+            <h3 className='font-bold text-xl px-4 my-4'> Who to heed?</h3>
+            <div>
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div 
+                key={i} 
+                className='hover:bg-white/10 p-4 flex space-x-2 items-center last:rounded-b-xl transition duration-200'
+                >
+                  <div className='w-10 h-10 bg-neutral-600 rounded-full'></div>
+                  <div className='flex flex-col space-y-2'>
+                    <div>Other User</div>
+                    <div>@otherUser1111</div>
+                  </div>
+                  <div>
+                    <button className='rounded-full px-6 py-2 bg-white text-neutral-950'>
+                      Follow
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div></div>
+        </section>
       </div>
     </div>
   )

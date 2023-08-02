@@ -8,7 +8,7 @@ import {BsShare} from 'react-icons/Bs'
 
 const MainPane = () => {
   return (
-    <main className ="ml-[275px] flex w-[600px] h-full flex-col min-h-screen border-l-[0.5px] border-r-[0.5px] border-gray-300">
+    <main className ="sticky top-0 flex w-[60%] h-full flex-col min-h-screen border-l-[0.5px] border-r-[0.5px] border-gray-300">
     <h1 className=" p-6 text-xl font-bold backdrop-blur bg-black/10 sticky top-0 ">Home</h1>
     <div className='flex items-stretch space-x-2 py-6 px-6 border-t-[0.5px] border-b-[0.5px] border-gray-300 relative'>
       <div className='w-10 h-10 bg-slate-300 rounded-full flex-none'></div>

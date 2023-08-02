@@ -43,7 +43,7 @@ import React from 'react'
 
 const LeftPane = () => {
   return (
-    <section className="fixed w-[275px] flex flex-col items-stretch h-screen px-8">
+    <section className="sticky top-0 w-[275px] flex flex-col items-stretch h-screen px-8">
         <div className ="flex flex-col items-stretch h-full space-y-4 mt-4">
             {NAVIGATION_ITEMS.map((item) => (
                  <Link 
@@ -53,9 +53,11 @@ const LeftPane = () => {
                     <div>
                         <item.icon/>
                     </div>
-            {       item.title !== "Twotta" && <div>{item.title}</div>}
+                  {item.title !== "Twotta" && <div>{item.title}
+                  </div>
+                  }
                 </Link>
-  ))}
+            ))}
             <button className ="w-full rounded-full m-4 bg-twotcolour p-4 text-2xl text-center hover:bg-opacity-40 transition duration-100" >
                 Twot
             </button>
