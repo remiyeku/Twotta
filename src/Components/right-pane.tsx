@@ -1,25 +1,20 @@
-import LeftPane from '@/Components/left-pane'
-import MainPane from '@/Components/main-pane'
+import React from 'react'
 import {BiSearch} from 'react-icons/Bi'
 
-const Home = () => {
+const RightPane = () => {
   return (
-    <div className= "w-full h-full flex justify-center items-center relative bg-black">
-      <div className="max-w-[80vw] w-full h-full flex relative">
-        <LeftPane/>
-        <MainPane/>
-        <section className='sticky top-2 overflow-y-scroll mt-2 border-3 flex flex-col items-stretch h-screen px-6'>
+    <section className='sticky top-2 overflow-y-scroll mt-2 border-3 flex flex-col items-stretch h-screen px-6'>
           <div>
             <div className='relative w-full h-full group'>
             <input 
               id='searchBox'
               type='text' 
               placeholder='Search Twot' 
-              className='outline-none peer focus:border-twotcolour focus:border bg-neutral-700/90 w-full h-full rounded-xl py-4 pl-14 pr-4'
+              className='outline-none peer focus:border-primary focus:border bg-neutral-700/90 w-full h-full rounded-xl py-4 pl-14 pr-4'
             />
             <label 
               htmlFor='searchBox' 
-              className='absolute top-0 left-0 h-full flex items-center justify-center p-4 text-gray-400 peer-focus:text-twotcolour'
+              className='absolute top-0 left-0 h-full flex items-center justify-center p-4 text-gray-400 peer-focus:text-primary'
             >
                 <BiSearch className='w-5 h-5'/>
             </label>       
@@ -45,17 +40,19 @@ const Home = () => {
               {Array.from({ length: 5 }).map((_, i) => (
                 <div 
                 key={i} 
-                className='hover:bg-white/10 p-4 flex space-x-2 items-center last:rounded-b-xl transition duration-200'
+                className='hover:bg-white/10 p-4 flex justify-between items-center last:rounded-b-xl transition duration-200'
                 >
-                  <div className='w-10 h-10 bg-neutral-600 rounded-full'></div>
-                  <div className='flex flex-col space-y-2'>
-                    <div>Other User</div>
-                    <div>@otherUser1111</div>
-                  </div>
-                  <div>
-                    <button className='rounded-full px-6 py-2 bg-white text-neutral-950'>
-                      Follow
-                    </button>
+                  <div className='fleex items-centers space-x-2'>
+                    <div className='w-10 h-10 bg-neutral-600 rounded-full'></div>
+                    <div className='flex flex-col space-y-2'>
+                      <div className='font-bold text-white '>Other User</div>
+                      <div className='text-gray-500 text-xs'>@otheruser1111</div>
+                    </div>
+                    <div>
+                      <button className='rounded-full px-6 py-2 bg-white text-neutral-950'>
+                        Follow
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -63,9 +60,7 @@ const Home = () => {
           </div>
           <div></div>
         </section>
-      </div>
-    </div>
   )
 }
 
-export default Home
+export default RightPane
