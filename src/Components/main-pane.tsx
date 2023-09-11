@@ -1,9 +1,9 @@
 import React from 'react'
-import {LiaCommentAltSolid} from 'react-icons/Lia'
-import {GoReply} from 'react-icons/Go'
-import {AiOutlineHeart} from 'react-icons/Ai'
-import {MdInsights} from 'react-icons/Md'
-import {BsShare} from 'react-icons/Bs'
+import {LiaCommentAltSolid} from 'react-icons/lia'
+import {GoReply} from 'react-icons/go'
+import {AiOutlineHeart} from 'react-icons/ai'
+import {MdInsights} from 'react-icons/md'
+import {BsShare} from 'react-icons/bs'
 
 
 const MainPane = () => {
