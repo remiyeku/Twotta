@@ -1,10 +1,10 @@
-import {IoMdHome} from 'react-icons/Io'
-import {FaSlackHash} from 'react-icons/Fa'
-import {PiBellRingingFill} from 'react-icons/Pi'
+import {IoMdHome} from 'react-icons/io'
+import {FaSlackHash} from 'react-icons/fa'
+import {PiBellRingingFill} from 'react-icons/pi'
 import {HiOutlineEnvelope} from 'react-icons/hi2'
-import {BsBookmark} from 'react-icons/Bs'
-import {AiOutlineUser} from 'react-icons/Ai'
-import {GiDinosaurEgg} from 'react-icons/Gi'
+import {BsBookmark} from 'react-icons/bs'
+import {AiOutlineUser} from 'react-icons/ai'
+import {GiDinosaurEgg} from 'react-icons/gi'
 import Link from 'next/link'
 
 const NAVIGATION_ITEMS = [
