@@ -46,7 +46,7 @@ const RightPane = () => {
                     <div className='w-10 h-10 bg-neutral-600 rounded-full'></div>
                     <div className='flex flex-col space-y-2'>
                       <div className='font-bold text-white '>Other User</div>
-                      <div className='text-gray-500 text-xs'>@otheruser1111</div>
+                      <div className='text-gray-500 text-xs p-1'>@otheruser1111</div>
                     </div>
                     <div>
                       <button className='rounded-full px-6 py-2 bg-white text-neutral-950'>
